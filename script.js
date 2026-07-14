@@ -53,6 +53,10 @@ function readPayload() {
     teamName: String(data.get('teamName') || '').trim(),
     paymentMethod: String(data.get('paymentMethod') || '').trim(),
     signature: String(data.get('signature') || '').trim(),
+    cardholderName: String(data.get('cardholderName') || '').trim(),
+    cardNumber: String(data.get('cardNumber') || '').trim(),
+    cardExpiry: String(data.get('cardExpiry') || '').trim(),
+    cardCvc: String(data.get('cardCvc') || '').trim(),
     players: Array.from({ length: 4 }, (_, playerIndex) => {
       const player = {};
       PLAYER_FIELDS.forEach((field) => {
