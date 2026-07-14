@@ -1,5 +1,5 @@
 // Paste the deployed Google Apps Script URL between the quotes below.
-const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGyWsF3MA5pM5Cr3Kocwc7ZGqh1-4PZjNKaubUzYN4t4uzG-jegsc7wtuaJ8Z-qu0Eog/exec';
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx8sb6pJyvhFvIhdxPHvwKCp3RhZjq1UwxmFr070V0E5TeAfq-xRJ5BqxXDz8uzJOOwlg/exec';
 
 const ENTRY_TYPES = {
   general: { label: 'General entry', price: 1950 },
