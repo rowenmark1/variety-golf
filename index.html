@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Register your team for the Variety Golf Day 2026." />
+    <title>Variety Golf Day 2026 | Team Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">In support of Variety – the Children&apos;s Charity</p>
+        <h1>Golf Day <span>2026</span></h1>
+        <p class="hero-description">An exceptional day on the greens, bringing people together to help kids find their way forward.</p>
+        <div class="event-details">
+          <span>Friday 13 November 2026</span>
+          <span>Kooyonga Golf Club</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/variety-golf.jpg" alt="Golf carts on a leafy golf course" />
+        <span class="sponsor-badge">Proudly sponsored by Aussiefast</span>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <div class="page-heading">
+        <p class="eyebrow eyebrow-dark">Team registration</p>
+        <h2>Reserve your place</h2>
+        <p>Complete the form below. One team entry includes four players.</p>
+      </div>
+
+      <form id="registration-form" novalidate>
+        <div class="form-column">
+          <section class="panel">
+            <div class="panel-heading">
+              <p class="eyebrow eyebrow-dark">01</p>
+              <h3>Choose your entry</h3>
+              <p>Select the package that suits your team.</p>
+            </div>
+            <div class="choice-grid two-columns">
+              <label class="choice-card">
+                <input type="radio" name="entryType" value="general" checked />
+                <span class="choice-content">
+                  <span class="choice-title">General entry <strong>$1,950</strong></span>
+                  <span class="choice-description">The complete team day out.</span>
+                  <span class="choice-features">Competition entry · 2 carts · Breakfast &amp; lunch</span>
+                </span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="entryType" value="gold" />
+                <span class="choice-content">
+                  <span class="choice-title">Gold sponsor <strong>$2,750</strong></span>
+                  <span class="choice-description">A premium way to support Variety.</span>
+                  <span class="choice-features">Everything in General · Hole promotion · Luncheon recognition</span>
+                </span>
+              </label>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <p class="eyebrow eyebrow-dark">02</p>
+              <h3>Team details</h3>
+              <p>Tell us who will be joining us on the day.</p>
+            </div>
+            <label class="field field-wide">
+              <span>Team name</span>
+              <input name="teamName" type="text" placeholder="Your company or team name" required />
+            </label>
+            <div id="players-container" class="players-grid"></div>
+          </section>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <p class="eyebrow eyebrow-dark">03</p>
+              <h3>Payment method</h3>
+              <p>We&apos;ll send the payment instructions after registration.</p>
+            </div>
+            <div class="choice-grid three-columns">
+              <label class="choice-card compact">
+                <input type="radio" name="paymentMethod" value="cheque" checked />
+                <span class="choice-content">
+                  <span class="choice-title">Cheque</span>
+                  <span class="choice-description">Receive cheque instructions.</span>
+                </span>
+              </label>
+              <label class="choice-card compact">
+                <input type="radio" name="paymentMethod" value="eft" />
+                <span class="choice-content">
+                  <span class="choice-title">EFT</span>
+                  <span class="choice-description">Receive bank details.</span>
+                </span>
+              </label>
+              <label class="choice-card compact">
+                <input type="radio" name="paymentMethod" value="credit-card" />
+                <span class="choice-content">
+                  <span class="choice-title">Credit card</span>
+                  <span class="choice-description">Arrange payment securely.</span>
+                </span>
+              </label>
+            </div>
+            <div id="credit-card-fields" class="credit-card-fields" hidden>
+              <div class="panel-heading">
+                <p class="eyebrow eyebrow-dark">Secure card payment</p>
+                <h3>Card details</h3>
+                <p>These fields are shown when Credit card is selected.</p>
+              </div>
+              <div class="card-fields-grid">
+                <label class="field field-wide">
+                  <span>Cardholder name</span>
+                  <input name="cardholderName" type="text" autocomplete="cc-name" placeholder="Name on card" />
+                </label>
+                <label class="field field-wide">
+                  <span>Card number</span>
+                  <input name="cardNumber" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="1234 5678 9012 3456" />
+                </label>
+                <label class="field">
+                  <span>Expiry date</span>
+                  <input name="cardExpiry" type="text" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" />
+                </label>
+                <label class="field">
+                  <span>CVC</span>
+                  <input name="cardCvc" type="password" inputmode="numeric" autocomplete="cc-csc" placeholder="123" />
+                </label>
+                <label class="field field-wide">
+                  <span>Signature</span>
+                  <input name="signature" type="text" autocomplete="off" placeholder="Cardholder signature" />
+                </label>
+              </div>
+              <p class="security-note">The typed signature can be sent to Google Sheets. Card number, expiry date, and CVC are never sent there; connect a secure payment provider before using real card details.</p>
+            </div>
+          </section>
+        </div>
+
+        <aside class="summary-panel">
+          <p class="eyebrow">Your registration</p>
+          <h2>Order summary</h2>
+          <div class="summary-line">
+            <span id="summary-entry">General entry</span>
+            <strong id="summary-price">$1,950</strong>
+          </div>
+          <dl class="summary-details">
+            <div><dt>Date</dt><dd>13 November 2026</dd></div>
+            <div><dt>Venue</dt><dd>Kooyonga Golf Club</dd></div>
+            <div><dt>Players</dt><dd id="summary-players">0 of 4 complete</dd></div>
+          </dl>
+          <label class="summary-team">
+            <span>Team</span>
+            <strong id="summary-team-name">Your team name</strong>
+          </label>
+          <button class="submit-button" type="submit">Submit registration <span aria-hidden="true">→</span></button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <p class="summary-note">We&apos;ll be in touch with confirmation and payment details.</p>
+        </aside>
+      </form>
+    </main>
+
+    <footer class="site-footer">Variety Golf Day 2026 · Kooyonga Golf Club</footer>
+  </body>
+</html>
